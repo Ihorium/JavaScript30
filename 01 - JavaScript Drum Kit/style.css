@@ -1,7 +1,12 @@
 html {
   font-size: 10px;
-  background: url('./background.jpg') bottom center;
-  background-size: cover;
+  background: url('https://i.ytimg.com/vi/QAm3BVVwACY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCd5SUidPVttnKuSki4kXg8nJLR6w');
+ background-position:bottom center;
+ background-size: cover;
+ background-repeat: no-repeat;
+ height: 100vh; /* Гарантує, що фон займає всю висоту екрану */
+    margin: 0; /* Видаляє можливі відступи */
+    overflow: hidden;
 }
 
 body,html {
@@ -11,9 +16,16 @@ body,html {
 }
 
 .keys {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(6, 20%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   flex: 1;
-  min-height: 100vh;
+  /* height: 100px; */
+  /* min-height: 100vh; */
   align-items: center;
   justify-content: center;
 }
